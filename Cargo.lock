@@ -682,6 +682,7 @@ dependencies = [
  "axum",
  "dotenv",
  "mini-redis",
+ "serde",
  "tokio",
 ]
 
