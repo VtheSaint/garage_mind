@@ -16,3 +16,10 @@ axum = "0.6.12"
 dotenv = "0.15.0"
 # Serde
 serde = "1.0"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+path = "src/main.rs"
+name = "garage_mind"
