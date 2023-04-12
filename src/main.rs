@@ -17,7 +17,7 @@ async fn main() {
     let database_url = env::var("DATABASE_URL")
         .unwrap_or_else(|e| panic!("Failed to get env with name 'DATABASE_URL': {:?}", e));
 
-    let routes_list = vec![routes::root()];
+    let routes_list = vec![routes::root(), routes::profile()];
     
     connector::server::run(parsed_address, routes_list).await;
 }
