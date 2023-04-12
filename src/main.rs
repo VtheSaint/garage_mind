@@ -4,7 +4,7 @@ use std::env;
 
 mod adapters;
 mod connector;
-// mod routes;
+mod routes;
 
 #[tokio::main]
 async fn main() {
@@ -17,5 +17,7 @@ async fn main() {
     let database_url = env::var("DATABASE_URL")
         .unwrap_or_else(|e| panic!("Failed to get env with name 'DATABASE_URL': {:?}", e));
 
+    let routes_list = vec![routes::root()];
+    
     connector::server::run(parsed_address).await;
 }

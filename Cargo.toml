@@ -16,6 +16,9 @@ axum = "0.6.12"
 dotenv = "0.15.0"
 # Serde
 serde = "1.0"
+# Serde Json
+serde_json = "1.0.91"
+
 
 [lib]
 path = "src/lib.rs"
