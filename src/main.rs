@@ -19,5 +19,5 @@ async fn main() {
 
     let routes_list = vec![routes::root()];
     
-    connector::server::run(parsed_address).await;
+    connector::server::run(parsed_address, routes_list).await;
 }
