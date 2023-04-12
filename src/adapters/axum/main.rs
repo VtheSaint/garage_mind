@@ -1,13 +1,10 @@
 
-use axum::{response::Html, routing::get, Router};
+use axum::{routing::get, Router};
 
 use std::{net::SocketAddr, str::FromStr};
 
 use crate::connector::routes::{Routes, Route};
 
-// use crate::connector::routes::{Route, Routes};
-
-// TODO: Add routes
 pub async fn run(parsed_address: String, routes: Routes) {
 
     let mut app: Router = Router::new();
@@ -28,7 +25,3 @@ pub async fn run(parsed_address: String, routes: Routes) {
 
 }
 
-
-async fn root() -> Html<&'static str> {
-    Html("hello world")
-}
